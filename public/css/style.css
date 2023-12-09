@@ -1,0 +1,64 @@
+body{
+    font-family: Agency FB;
+}
+.ligne{
+    /* border-left: 1px solid white; */
+    border-right: 1px solid #08905c;
+
+    transform: rotate(15deg);
+}
+.bloc{
+    width: auto;
+    padding: 5%;
+    text-align: center;
+    /* background-image: url('images/'); */
+   /* background: #1DB822;*/
+    background: -webkit-linear-gradient(to right,#08905c,#747a5b);
+    background: linear-gradient(to right,#08905c,#9d804a,#1DB822);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.blocJournee{
+    width: auto;
+    /* padding: 5%; */
+    /* text-align: center; */
+    /* background: #1DB822; */
+    background: -webkit-linear-gradient(to right,#08905c,#747a5b);
+    background: linear-gradient(to right,#08905c,#9d804a,#1DB822);
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+}
+
+.anime span:not(.fad) {
+    opacity: 0;
+    transform: translateY(50%) rotate(45deg);
+}
+
+.anime span {
+    transition:all .4s;
+    display: inline-block;
+}
+
+.animeVert span:not(.fad) {
+    opacity: 0;
+    /* transform: translateY(50%) rotate(45deg); */
+}
+
+.animeVert span {
+    transition:all .4s;
+    /* display: inline-block; */
+}
+
+.anime-typing span.fad + span:not(.fad){
+    transition: none;
+    background: #08905c;
+    opacity: 1;
+    transform: none;
+    color: transparent;
+}
