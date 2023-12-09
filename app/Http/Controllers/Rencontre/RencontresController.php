@@ -103,16 +103,17 @@ class RencontresController extends Controller
 
     public function getRencontres($id)
     {
-        $rencontres = DB::table('rencontres')
-        ->join('journees','rencontres.journee_id','=','journees.id')
-        ->whereJourneeId($id)
-        ->select('journees.nom_journee','rencontres.*',DB::raw('DATE_FORMAT(rencontres.date_ren, "%d %b %Y") as dat','DATE_FORMAT(rencontres.heure_ren, "%H:%i") as heure'))
-        // ->select('rencontres.*',DB::raw('DATE_FORMAT(rencontres.date_ren, "%d %b %Y à %H:%i") as dat'))
-        ->orderBy('dat','ASC')
-        ->get();
-        return response()->json([
-            'rencontres' => $rencontres
-        ]);
+        // $rencontres = DB::table('rencontres')
+        // ->join('journees','rencontres.journee_id','=','journees.id')
+        // ->whereJourneeId($id)
+        // ->select('journees.nom_journee','rencontres.*',DB::raw('DATE_FORMAT(rencontres.date_ren, "%d %b %Y") as dat','DATE_FORMAT(rencontres.heure_ren, "%H:%i") as heure'))
+        // // ->select('rencontres.*',DB::raw('DATE_FORMAT(rencontres.date_ren, "%d %b %Y à %H:%i") as dat'))
+        // ->orderBy('dat','ASC')
+        // ->get();
+        dd($id);
+        // return response()->json([
+        //     'rencontres' => $rencontres
+        // ]);
     }
 
     public function repport($id)

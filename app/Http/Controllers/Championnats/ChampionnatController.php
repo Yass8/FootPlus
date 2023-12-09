@@ -85,7 +85,7 @@ class ChampionnatController extends Controller
         );
     
         $champ = new Championnat();
-        $champ->cid = Hash::make($champ->id);
+        $champ->cid = uniqid()."".$champ->id;
         $champ->nom_championnat = $request->championnat;
         $champ->saison_id = $request->saison;
         $champ->etat_id = $request->etat;
